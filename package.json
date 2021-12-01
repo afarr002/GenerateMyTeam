@@ -1,0 +1,23 @@
+{
+  "name": "generatemyteam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afarr002/GenerateMyTeam.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/afarr002/GenerateMyTeam/issues"
+  },
+  "homepage": "https://github.com/afarr002/GenerateMyTeam#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0",
+    "jest": "^27.4.3"
+  }
+}
