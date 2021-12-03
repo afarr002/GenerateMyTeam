@@ -1,0 +1,20 @@
+.jumbotron {
+  background-color: orange;
+}
+
+.center {
+  text-align: center;
+}
+
+.card-header {
+  background-color: orange;
+}
+.card {
+  margin-top: 30px;
+}
+
+.sect-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
