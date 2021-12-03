@@ -143,9 +143,7 @@ const buildCards = (team) => {
 const createTeam = () => {
   // writes the file to the html doc in the dist folder, and calls the information stored in buildCards with the team argument passed in, and stores an error message to be displayed if something goes wrong
   fs.writeFile("./dist/index.html", buildCards(team), (err) => {
-    if (err) {
-      err ? console.log(err) : console.log("Index.HTML file was written!");
-    }
+    err ? console.log(err) : console.log("Index.HTML file was written!");
   });
 };
 
@@ -153,9 +151,7 @@ const createTeam = () => {
 const createStyleCSS = () => {
   // writes the file to the css doc in the dist folder, and calls the information stored in styleCSS variable, and stores an error message to be displayed if something goes wrong
   fs.writeFile("./dist/style.css", styleCSS, (error) => {
-    if (error) {
-      error ? console.log(error) : console.log("Style.CSS file was written!");
-    }
+    error ? console.log(error) : console.log("Style.CSS file was written!");
   });
 };
 
