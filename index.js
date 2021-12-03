@@ -1,12 +1,14 @@
+// require neccesary packages
 const inquirer = require("inquirer");
 const fs = require("fs");
 
+// require other js sheets you created
 const Manager = require("./lib/manager");
 const Engineer = require("./lib/engineer");
 const Intern = require("./lib/intern");
-
 const src = require("./src/src");
 
+// array of questions to ask user in prompt
 const questions = [
   {
     type: "input",
@@ -31,8 +33,11 @@ const questions = [
   },
 ];
 
+// fucntion responsible for kicking off the application - ask first questions, delivers follow up questions then calls the createEmployee function passing in the data it received from the user as arguments
 function init() {
+  // calls the variabkle array named questions - then passes the users answers as arguments into anon funtion in .then
   inquirer.prompt(questions).then((answers) =>
+    // annon function runs the follow up question based on the users response to role question.
     inquirer
       .prompt([
         {
@@ -66,16 +71,19 @@ function init() {
   );
 }
 
+// function is responsible for creating the subclass objects based on user information that is being passed in as arguments
 const createEmployee = (answers, office, github, school) => {
   if (answers.role === "Manager") {
-    src.team;
+    // creates new subclass constructor object
     const newManager = new Manager(
       answers.name,
       answers.empID,
       answers.email,
       office
     );
+    // pushes new constructor object to variable array named team
     src.team.push(newManager);
+    // calls the fuction responsible for asking to add another emp
     addEmp();
   } else if (answers.role === "Engineer") {
     const newEngineer = new Engineer(
@@ -98,6 +106,7 @@ const createEmployee = (answers, office, github, school) => {
   }
 };
 
+// async request for last question
 const addEmp = async () => {
   const answer = await inquirer.prompt([
     {
@@ -106,12 +115,16 @@ const addEmp = async () => {
       name: "addEmp",
     },
   ]);
+  // if addEmp is truthy then export current user input to buildCards on src page - then run the init function again
   if (answer.addEmp === true) {
-    src.grabTeamString;
+    src.buildCards;
     init();
   } else {
+    // calls the functions from the src document
     src.createTeam();
+    src.createStyleCSS();
   }
 };
 
+// init function call
 init();
