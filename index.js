@@ -13,17 +13,18 @@ const questions = [
   {
     type: "input",
     message:
-      "What is your employee's name? (Cannot be less than two A-z characters)",
+      "What is your employee's name? (Cannot be less than two characters)",
     name: "name",
   },
   {
     type: "input",
-    message: "What is your employee's ID? (Only numerical digits allowed)",
+    message: "What is your employee's ID? (Cannot be less than 4 characters)",
     name: "empID",
   },
   {
     type: "input",
-    message: "What is your employee's email address?",
+    message:
+      "What is your employee's email address? (Cannot be less than 7 characters)",
     name: "email",
   },
   {
@@ -43,7 +44,8 @@ function init() {
       .prompt([
         {
           type: "input",
-          message: "What is your manager's office number?",
+          message:
+            "What is your manager's office number? (Cannot be less than 3 numerical digits)",
           name: "office",
           when: function (_) {
             return answers.role === "Manager";
@@ -51,7 +53,8 @@ function init() {
         },
         {
           type: "input",
-          message: "What is your engineer's GutHub username?",
+          message:
+            "What is your engineer's GitHub username? (Cannot be less than 3 characters)",
           name: "github",
           when: function (_) {
             return answers.role === "Engineer";
@@ -59,7 +62,8 @@ function init() {
         },
         {
           type: "input",
-          message: "What school does your intern attend?",
+          message:
+            "What school does your intern attend? (Cannot be less than 3 characters)",
           name: "school",
           when: function (_) {
             return answers.role === "Intern";
