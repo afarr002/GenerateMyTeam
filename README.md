@@ -4,7 +4,7 @@
 
 ## Description
 
-I wanted to build a program for small businesses to keep track of employee's and their roles. By answering a series of questions and follow up questins, my application will sort a businesses employees into job roles and present them on an easy to read display.
+I wanted to build a program for small businesses to keep track of employee's and their roles. By answering a series of questions and follow up questions, my application will sort a businesses employees into job roles and present them on an easy to read display with data specific to their positions.
 
 ---
 
