@@ -26,7 +26,8 @@ Install Inquirer and Jest (npm install inquirer + npm install jest [to run tests
 ## Usage
 
 Simply enter node index.js to queue the questions, answer until you have entered all employees, then the page will auto generate and style itself!
-[Screen Shot of Deployed Application](./assets/GenerateMtTeamScreenShot.png)
+<img width="1362" alt="GenerateMyTeamScreenShot" src="https://user-images.githubusercontent.com/88466341/144790682-c2097699-145b-4445-9790-69c2393cebf6.png">
+
 
 ## License
 
