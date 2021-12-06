@@ -11,6 +11,7 @@ describe("Engineer", () => {
         "engGithub"
       );
 
+      expect(newEng instanceof Employee);
       expect(newEng.name).toEqual("engName");
       expect(newEng.id).toEqual("EMP1");
       expect(newEng.email).toEqual("engEmail@email.com");
@@ -50,17 +51,20 @@ describe("Engineer", () => {
         "engGithub"
       );
 
-      expect(engGithub.github).toEqual("engGithub");
+      expect(engGithub.getGithub()).toEqual("engGithub");
     });
   });
 
   describe("getRole()", () => {
-    it("should return the new role of engineer", () => {
-      function getRole() {
-        return "Engineer";
-      }
+    it("it should return the new constructor object's role", () => {
+      const engRole = new Engineer(
+        "name",
+        "EMP1",
+        "employeeEmail@email.com",
+        "engGithub"
+      );
 
-      expect(getRole()).toEqual("Engineer");
+      expect(engRole.getRole()).toEqual("Engineer");
     });
   });
 });

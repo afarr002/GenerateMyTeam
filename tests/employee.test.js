@@ -2,7 +2,7 @@ const Employee = require("../lib/employee");
 
 describe("Employee", () => {
   describe("initialization", () => {
-    it("should create an object with name, id, and email", () => {
+    it("should create an object with strings for name, id, and email", () => {
       const emp = new Employee("name", "EMP1", "employeeEmail@email.com");
 
       expect(emp.name).toEqual("name");
@@ -60,7 +60,7 @@ describe("Employee", () => {
     it("it should return the new constructor object's name", () => {
       const empName = new Employee("name", "EMP1", "employeeEmail@email.com");
 
-      expect(empName.name).toEqual("name");
+      expect(empName.getName()).toEqual("name");
     });
   });
 
@@ -68,7 +68,7 @@ describe("Employee", () => {
     it("it should return the new constructor object's id", () => {
       const empId = new Employee("name", "EMP1", "employeeEmail@email.com");
 
-      expect(empId.id).toEqual("EMP1");
+      expect(empId.getId()).toEqual("EMP1");
     });
   });
 
@@ -76,17 +76,15 @@ describe("Employee", () => {
     it("it should return the new constructor object's email", () => {
       const empEmail = new Employee("name", "EMP1", "employeeEmail@email.com");
 
-      expect(empEmail.email).toEqual("employeeEmail@email.com");
+      expect(empEmail.getEmail()).toEqual("employeeEmail@email.com");
     });
   });
 
   describe("getRole()", () => {
     it("it should return the new constructor object's role", () => {
-      function getRole() {
-        return "Employee";
-      }
+      const empRole = new Employee("name", "EMP1", "employeeEmail@email.com");
 
-      expect(getRole()).toEqual("Employee");
+      expect(empRole.getRole()).toEqual("Employee");
     });
   });
 });

@@ -11,6 +11,7 @@ describe("Intern", () => {
         "intSchool"
       );
 
+      expect(newInt instanceof Employee);
       expect(newInt.name).toEqual("intName");
       expect(newInt.id).toEqual("EMP1");
       expect(newInt.email).toEqual("intEmail@email.com");
@@ -50,17 +51,20 @@ describe("Intern", () => {
         "intSchool"
       );
 
-      expect(intSchool.school).toEqual("intSchool");
+      expect(intSchool.getSchool()).toEqual("intSchool");
     });
   });
 
   describe("getRole()", () => {
     it("should return the new role of intern", () => {
-      function getRole() {
-        return "Intern";
-      }
+      const intRole = new Intern(
+        "intName",
+        "EMP1",
+        "intEmail@email.com",
+        "intSchool"
+      );
 
-      expect(getRole()).toEqual("Intern");
+      expect(intRole.getRole()).toEqual("Intern");
     });
   });
 });
