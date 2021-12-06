@@ -12,12 +12,13 @@ const src = require("./src/src");
 const questions = [
   {
     type: "input",
-    message: "What is your employee's name?",
+    message:
+      "What is your employee's name? (Cannot be less than two A-z characters)",
     name: "name",
   },
   {
     type: "input",
-    message: "What is your employee's ID?",
+    message: "What is your employee's ID? (Only numerical digits allowed)",
     name: "empID",
   },
   {
